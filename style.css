@@ -57,7 +57,11 @@ body{
     justify-content: space-between;
     padding: 20px 80px;
     background: #e6e8fa;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #navbar{
@@ -119,6 +123,8 @@ body{
 #hero h1{
     color: #d891ef; 
 }
+
+/* hero button animation */
 #hero .cta {
     border: none;
     background: none;
