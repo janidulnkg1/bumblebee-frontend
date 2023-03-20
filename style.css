@@ -47,7 +47,7 @@ p{
 
 body{
     width: 100%;
-    background: #e6e6fa;
+    
 }
 
 /* Navbar Designing */
@@ -103,11 +103,11 @@ body{
 
 /* Hero Designing */
 #hero{
-    background-image: url("IMAGES/hero/3.png");
+    background-image: url("IMAGES/hero/1.jpg");
     height: 100vh;
     width: 100%;
     background-size: cover;
-    background-position: top 25% right 0;
+    background-position: top 5% right 0;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -173,4 +173,42 @@ body{
 #hero .cta:hover .hover-underline-animation:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  /* feature designing */
+
+  #feature{
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #d891ef;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+
+  #feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+  }
+
+  #feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+
+  }
+
+  #feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #d891ef;
+    background-color: #e6e8fa;
   }
