@@ -195,7 +195,7 @@ body{
   }
 
   #feature .fe-box:hover{
-    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    box-shadow: 20px 20px 54px rgba(70, 62, 221, 0.1);
   }
 
   #feature .fe-box img{
