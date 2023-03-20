@@ -212,3 +212,18 @@ body{
     color: #d891ef;
     background-color: #e6e8fa;
   }
+  #feature .fe-box:nth-child(2) h6{
+    background-color: #ffffe0 ;
+  }
+  #feature .fe-box:nth-child(3) h6{
+    background-color: #e7feff ;
+  }
+  #feature .fe-box:nth-child(4) h6{
+    background-color: #d0f0c0 ;
+  }
+  #feature .fe-box:nth-child(5) h6{
+    background-color: #ffcc99 ;
+  }
+  #feature .fe-box:nth-child(6) h6{
+    background-color: #f4bbff ;
+  }
