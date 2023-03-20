@@ -47,14 +47,16 @@ p{
 
 body{
     width: 100%;
+    background: #e6e6fa;
 }
 
+/* Navbar Designing */
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    background: #dcd0ff;
+    background: #e6e8fa;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06)
 }
 
@@ -81,7 +83,7 @@ body{
 
 #navbar li a:hover,
 #navbar li a.active{
-    color: #088178;
+    color: #df73ff;
 }
 
 #navbar li a.active::after,
@@ -89,8 +91,32 @@ body{
     content: "";
     width: 30%;
     height: 2px;
-    background: #088178;
+    background: #df73ff;
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+
+/* Hero Designing */
+#hero{
+    background-image: url("IMAGES/hero/3.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+
+}
+
+#hero h1{
+    color: #d891ef;
+    
 }
