@@ -59,6 +59,7 @@ button.white{
 
 body{
     width: 100%;
+    background-color: #e6e6fa;
     
 }
 
@@ -401,13 +402,16 @@ body{
     justify-content: center;
     align-items: flex-start;
     padding: 30px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(236,85,228,1) 0%, rgba(0,212,255,1) 100%);
+    background-image: url('IMAGES/banner/excited.jpg');
     width: 580px;
     height: 50vh;
     background-size: cover;
     background-position: centre;
    
+  }
+
+  #sm-banner .banner-box2{
+   background-image: url('IMAGES/banner/cards.jpg');
   }
 
   #sm-banner h4{
@@ -417,7 +421,7 @@ body{
   }
 
   #sm-banner h2{
-    color: #fbcaf8;
+    color: #e6e6fa;
     font-size: 28px;
     font-weight: 800;
   }
