@@ -438,5 +438,60 @@ body{
     border: 1px solid #d891ef;
   }
 
+  /* Designing Promotional small banners */
+
+  #banner3{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+  }
+
+  #banner3 .banner-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,222,98,1) 0%, rgba(0,255,153,1) 100%);
+    width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: centre;
+    padding: 30px;
+    margin-top: 20px;
+   
+  }
+
+  #banner3 .banner-box2{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,98,222,1) 0%, rgba(0,212,255,1) 100%);
+  }
+
+  #banner3 .banner-box3{
+    background-image: url('IMAGES/banner/basketball.jpg');
+  }
+
+  #banner3 h2{
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 5px;
+  }
  
+  #banner3 h3{
+    color: #f0f8ff;
+    font-weight: 800;
+    font-size: 18px;
+  }
+
+  #banner3 span{
+    font-weight: 1200;
+    font-size: 25px;
+  }
+
+  #banner3:hover span{
+    color: red;
+  }
+  
 
