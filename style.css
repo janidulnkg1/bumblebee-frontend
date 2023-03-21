@@ -310,23 +310,23 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("IMAGES/banner/1.png");
+    background-image: url("IMAGES/banner/2.jpg");
     width: 100%;
     height: 40vh;
     background-size: cover;
-    background-position: centre;
+    background-position: top 15% right 0;
     padding: 0 80px;
   }
 
   #banner h4{
     color: #ffffe0;
     font-size: 20px;
-    padding: 10px 0;
-    margin-top: 80px;
+    padding: 5px 0;
+    
   }
 
   #banner h2{
-    color: #9400d3 ;
+    color: #4169e1 ;
     font-size: 40px;
     padding: 10px 0;
   }
@@ -336,7 +336,7 @@ body{
 
   #banner .ban-btn {
     font-size: 18px;
-    color: #e1e1e1;
+    color: #cce7d0;
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
