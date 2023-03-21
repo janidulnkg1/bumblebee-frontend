@@ -45,6 +45,18 @@ p{
     margin: 40px 0;
 }
 
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #e6e8fa;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+}
+
 body{
     width: 100%;
     
@@ -374,7 +386,53 @@ body{
     transition-property: width, left;
   }
 
-  
+  /* Promotional Banner Box designing */
+
+  #sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
 
+  #sm-banner .banner-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(236,85,228,1) 0%, rgba(0,212,255,1) 100%);
+    width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: centre;
+   
+  }
+
+  #sm-banner h4{
+    color: #e7feff;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  #sm-banner h2{
+    color: #fbcaf8;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  #sm-banner span{
+    color: #ffffe0;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;;
+  }
+
+  #sm-banner .banner-box:hover button{
+    background-color: #df73ff;
+    border: 1px solid #d891ef;
+  }
+
+ 
 
