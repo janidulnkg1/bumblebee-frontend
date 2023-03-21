@@ -315,16 +315,19 @@ body{
     height: 40vh;
     background-size: cover;
     background-position: centre;
+    padding: 0 80px;
   }
 
   #banner h4{
     color: #ffffe0;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 10px 0;
+    margin-top: 80px;
   }
 
   #banner h2{
     color: #9400d3 ;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px 0;
   }
   #banner h2 span{
@@ -332,17 +335,45 @@ body{
   }
 
   #banner .ban-btn {
-    padding: 0.1em 0.25em;
-    width: 13em;
-    height: 4.2em;
-    background-color: #212121;
-    border: 0.08em solid #fff;
-    border-radius: 0.3em;
-    font-size: 12px;
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
   }
   
+  .ban-btn:focus,
+  .ban-btn:hover {
+    color: #df73ff;
   }
   
+   .ban-btn:focus:after,
+  .ban-btn:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+   .ban-btn:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #df73ff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
   
 
 
