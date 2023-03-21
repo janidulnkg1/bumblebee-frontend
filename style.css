@@ -331,6 +331,10 @@ body{
     padding: 0 80px;
   }
 
+  #banner:hover .ban-btn{
+    color:  #76ff7a;
+  }
+
   #banner h4{
     color: #ffffe0;
     font-size: 20px;
@@ -452,8 +456,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(209,222,98,1) 0%, rgba(0,255,153,1) 100%);
+    background-image: url('IMAGES/banner/shirts.jpg') ;
     width: 30%;
     height: 30vh;
     background-size: cover;
@@ -464,8 +467,7 @@ body{
   }
 
   #banner3 .banner-box2{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,98,222,1) 0%, rgba(0,212,255,1) 100%);
+    background-image: url('IMAGES/banner/winter.jpg');
   }
 
   #banner3 .banner-box3{
@@ -493,5 +495,80 @@ body{
   #banner3:hover span{
     color: red;
   }
+  
+  /* Designing newsletter */
+
+  #newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,217,222,1) 0%, rgba(255,0,198,1) 100%);
+    background-position: 20% 30%;
+    margin-top: 20px;
+  }
+
+  #newsletter:hover span{
+    color: #cc00ff ;
+  }
+  
+
+  #newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #f8f8ff ;
+  }
+
+  #newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #f0ffff  ;
+  }
+
+  #newsletter .form{
+    display: flex;
+    width: 40%;
+
+  }
+
+  #newsletter input{
+  font-size: 14px ;
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  }
+
+  #newsletter button{
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top, 
+       border-left, 
+       border-bottom,
+       border-right,
+       box-shadow;
+       margin-left: 10px;
+   }
+   
+   
+  #newsletter button:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+   }
   
 
