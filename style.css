@@ -301,13 +301,49 @@ body{
     position: absolute;
     bottom: 5px;
     right: 10px;
-    
-   
-
-
-
-
   }
+
+  /* promotional banner designing */
+  #banner{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("IMAGES/banner/1.png");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: centre;
+  }
+
+  #banner h4{
+    color: #ffffe0;
+    font-size: 16px;
+  }
+
+  #banner h2{
+    color: #9400d3 ;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+  #banner h2 span{
+    color:  #ff00ff ;
+  }
+
+  #banner .ban-btn {
+    padding: 0.1em 0.25em;
+    width: 13em;
+    height: 4.2em;
+    background-color: #212121;
+    border: 0.08em solid #fff;
+    border-radius: 0.3em;
+    font-size: 12px;
+  }
+  
+  }
+  
+  
 
 
 
