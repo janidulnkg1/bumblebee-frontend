@@ -675,6 +675,7 @@ body{
   color: #d891ef;
   font-weight: 800;
   font-size: 50px;
+  
 }
 
 #page-header p{
@@ -684,25 +685,25 @@ body{
 }
 
 #carousel{
-  width: 100vh;
   width: 100%;
 }
 
 #carousel .carousel-item{
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   position: 20px;
 }
 
 #carousel .carousel-caption h5{
   font-size: 40px;
   font-weight: 600;
-  color: lightskyblue;
+  color: #ff1dce;
 }
 
 #carousel .carousel-caption p{
   font-size: 15px;
-  color: #ffffff;
+  color:#4b0082  ;
+  font-weight: 500;
 }
 
 
