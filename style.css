@@ -760,6 +760,10 @@ body{
   font-weight: 600;
 }
 
+#login .create-acc-link{
+  margin-left: 25px;
+}
+
 #login .form-check-label{
   font-size: 12px;
   margin-bottom: 5px;
