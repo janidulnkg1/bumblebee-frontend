@@ -658,6 +658,7 @@ body{
   
 /* Making Webpage Responsive */
 
+/* Responsive Tablet Design */
 @media (max-width:799px){
   .section-p1{
     padding: 40px 40px;
@@ -719,15 +720,15 @@ body{
     justify-content: center;
   }
 
-  #feature.fe-box{
+  #feature .fe-box{
     margin: 15px 15px ;
   }
 
-  #product.pro-container{
+  #product .pro-container{
     justify-content: center;
   }
 
-  #product.pro{
+  #product .pro{
     margin: 15px;
   }
 
@@ -735,7 +736,7 @@ body{
     height: 20vh;
   }
 
-  #sm-banner.banner-box{
+  #sm-banner .banner-box{
     min-width: 100%;
     height: 30vh;
   }
@@ -744,12 +745,17 @@ body{
     padding: 0 40px;
   }
 
-  #banner3.banner-box{
+  #banner3 .banner-box{
     width: 28%;
   }
 
-  #newsletter.form{
+  #newsletter .form{
     width: 70%;
     
   }
+
+/* Responsive smart-phone design */
+
+
+
 }
