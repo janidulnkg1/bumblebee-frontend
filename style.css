@@ -730,9 +730,16 @@ body{
 }
 
 
+#login .lbl{
+  color: #ffffe0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 #login label{
   text-align: center;
-  
+  color: #E3E6F3;
+  font-weight: 600;
 }
 
 #login .form-check-label{
@@ -814,6 +821,23 @@ body{
     background-position: top 30% right 30%;
   }
 
+  #login{
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  #login label{
+    color: #E3E6F3;
+    font-weight: 600;
+  }
+
+  #login .lbl{
+    color: #ffffe0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
   #feature{
     justify-content: center;
   }
@@ -869,6 +893,11 @@ body{
   }
 
   #hero{
+    padding: 0 20px;
+    background-position: 55%;
+  }
+
+  #login{
     padding: 0 20px;
     background-position: 55%;
   }
