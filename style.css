@@ -715,12 +715,49 @@ body{
 
 
 
+/* Login / Signup Page */
+#login{
+  background-image: url("IMAGES/wallpaper/wallpaper1.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 10% right 50%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+#login label{
+  text-align: center;
+  
+}
+
+#login .form-check-label{
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+#login .form-control{
+  font-size: 14px ;
+  height: 3.125rem;
+  padding: 15px;
+  width: 300px;
+  border: 1px solid slateblue;
+  border-radius: 8px;
+  outline: none;
+  margin-left: 40px;
+}
+
+
 
 
 /* Making Webpage Responsive */
 
 /* Responsive Tablet Design */
-@media (max-width:799px){
+@media (max-width:820px){
   .section-p1{
     padding: 40px 40px;
   }
