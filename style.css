@@ -760,8 +760,8 @@ body{
   font-weight: 600;
 }
 
-#login .create-acc-link{
-  margin-left: 25px;
+#login .a{
+  margin-left: 40px;
 }
 
 #login .form-check-label{
@@ -897,6 +897,16 @@ body{
     width: 70%;
     
   }
+  #login a{
+    color: #e6e8fa;
+  }
+
+  #login a:hover{
+    color: #cc00ff;
+  }
+
+
+
 
 /* Responsive smart-phone design */
 @media (max-width: 477px) {
