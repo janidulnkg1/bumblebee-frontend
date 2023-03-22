@@ -77,6 +77,11 @@ body{
     left: 0;
 }
 
+#header .logo{
+  height: 30%;
+  width:150px;
+}
+
 #navbar{
     display: flex;
     align-items: center;
@@ -588,7 +593,7 @@ body{
 
    footer .logo{
     margin-bottom: 10px;
-    width: 300px;
+    width: 200px;
    
    }
 
