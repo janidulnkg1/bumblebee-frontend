@@ -118,6 +118,10 @@ body{
     bottom: -4px;
     left: 20px;
 }
+#mobile{
+  display:none;
+  align-items: center;
+}
 
 /* Hero Designing */
 #hero{
@@ -348,7 +352,7 @@ body{
   }
 
   #banner h2{
-    color: #4169e1 ;
+    color: #f0ffff ;
     font-size: 40px;
     padding: 10px 0;
   }
@@ -412,10 +416,11 @@ body{
     align-items: flex-start;
     padding: 30px;
     background-image: url('IMAGES/banner/excited.jpg');
-    width: 580px;
+    width: 500px;
     height: 50vh;
     background-size: cover;
     background-position: centre;
+    margin-bottom: 20px;
    
   }
 
@@ -482,14 +487,14 @@ body{
   #banner3 h2{
     color: white;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 5px;
   }
  
   #banner3 h3{
     color: #f0f8ff;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #banner3 span{
@@ -655,7 +660,7 @@ body{
 
 @media (max-width:799px){
   #navbar{
-    dsiplay:flex;
+    display:flex;
     flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
@@ -671,5 +676,10 @@ body{
   }
   #navbar li{
     margin-bottom: 25px;
+  }
+
+  #mobile{
+    display:flex;
+    align-items: center;
   }
 }
