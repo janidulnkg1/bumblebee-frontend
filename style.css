@@ -595,6 +595,7 @@ body{
     align-items: flex-start;
     margin-bottom: 20px;  
    }
+   
 
    footer .logo{
     margin-bottom: 10px;
@@ -682,6 +683,10 @@ body{
   color: #e6e6fa;
   margin-top: 20px;
   font-size: 30;
+}
+
+#page-header:hover span{
+  color: #76ff7a;
 }
 
 #carousel{
