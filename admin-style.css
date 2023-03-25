@@ -38,7 +38,7 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px;
+    width: 200px;
     background-color: #e6e8fa;
 }
 
@@ -54,4 +54,48 @@ nav .logo-image img{
     align-items: center;
     padding: 20px 20px ;
     
+}
+
+nav .menu-items{
+    margin-top: 20px;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu-items li{
+    list-style: none;
+}
+
+.menu-items li a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+}
+.menu-items li a:before{
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #f9d1f0;
+}
+
+.menu-items li a i{
+    font-size: 24px;
+    min-width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+.menu-items li a .link-name{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black-light-color);
+}
+.nav-links li a:hover i, .nav-links li a:hover .link-name{
+    color: #d891ef;
 }
