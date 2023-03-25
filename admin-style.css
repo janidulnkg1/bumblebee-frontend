@@ -1,0 +1,31 @@
+/* Google font */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    /* colours */
+    --primary-color: e6e8fa;
+    --panel-color: #fff;
+    --text-color: #000;
+    --black-light-color: #707070;
+    --border-color: #e6e5e5;
+    --toggle-color: #DDD;
+    --box1-color: #d891ef;
+    --box2-color: #FFE6AC;
+    --box3-color: #ffd7f6;
+    --title-icon-color: #fff;
+
+    /* Transition */
+    --tran-05: all 0.5s ease;
+    --tran-03: all 0.3s ease;
+    --tran-03: all 0.2s ease;
+}
+
+nav .logo-image{
+    min-width: 
+}
