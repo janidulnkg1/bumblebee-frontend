@@ -102,3 +102,12 @@ nav .menu-items{
 .nav-links li a:hover i, .nav-links li a:hover .link-name{
     color: #d891ef;
 }
+.dashboard{
+    background-color: #e6e5e5;
+    position: relative;
+    min-height: 100vh;
+    width: calc(100% - 250px);   
+    padding: 10px 14px;
+
+
+}
