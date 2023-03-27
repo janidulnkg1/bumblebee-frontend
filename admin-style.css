@@ -67,15 +67,18 @@ nav .menu-items{
     list-style: none;
 }
 
+
 .menu-items li a{
     display: flex;
     align-items: center;
     height: 50px;
     text-decoration: none;
+    position: relative;
 }
-.menu-items li a:before{
+.nav-items li a:hover:before{
     position: absolute;
     content: "";
+    left: -7px;
     height: 5px;
     width: 5px;
     border-radius: 50%;
