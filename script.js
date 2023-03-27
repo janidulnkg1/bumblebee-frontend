@@ -12,4 +12,7 @@ if (close) {
 close.addEventListener('click', () =>{
         nav.classList.remove('active');
     })
-} 
+}  
+
+const body = document.querySelector("body"),
+    
