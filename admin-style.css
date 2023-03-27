@@ -75,7 +75,7 @@ nav .menu-items{
     text-decoration: none;
     position: relative;
 }
-.nav-items li a:hover:before{
+.nav-links li a:hover:before{
     position: absolute;
     content: "";
     left: -7px;
