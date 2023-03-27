@@ -656,6 +656,30 @@ body{
     width: 100%;
     text-align: center;
    }
+
+   /* sign up page designing */
+   #sign-up-form{
+    background-image: url('/IMAGES/wallpaper/wallpaper2.jpg');
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: top 0 right 0;
+    padding: 80px 80px;
+   }
+   #sign-up-form label{
+    color: #f0ffff;
+    font-size: 23px;
+    font-weight: 800;
+   }
+
+   #sign-up-form .placeholder{
+    color: #cce7d0;
+   }
   
 /* SHOP PAGE Designing */
 #page-header{
@@ -735,7 +759,7 @@ body{
 
 
 
-/* Login / Signup Page */
+/* Login  Page */
 #login{
   background-image: url("IMAGES/wallpaper/wallpaper1.jpg");
   height: 100vh;
