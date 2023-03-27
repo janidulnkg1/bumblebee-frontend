@@ -38,7 +38,7 @@ nav{
     top: 0;
     left: 0;
     height: 100%;
-    width: 200px;
+    width: 250px;
     background-color: #e6e8fa;
 }
 
@@ -108,6 +108,16 @@ nav .menu-items{
     min-height: 100vh;
     width: calc(100% - 250px);   
     padding: 10px 14px;
-
+    left: 250px;
+}
+.dashboard .top{
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    padding: 10px 14px;
+    background-color: #DDD;
 
 }

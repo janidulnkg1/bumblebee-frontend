@@ -14,5 +14,4 @@ close.addEventListener('click', () =>{
     })
 }  
 
-const body = document.querySelector("body"),
-    
+
