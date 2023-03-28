@@ -666,7 +666,7 @@ body{
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-size: cover;
     background-position: top 0 right 0;
     padding: 80px 80px;
@@ -676,6 +676,8 @@ body{
     font-size: 23px;
     font-weight: 800;
    }
+
+   
 
    #sign-up-form .placeholder{
     color: #cce7d0;
