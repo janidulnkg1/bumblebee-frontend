@@ -118,7 +118,7 @@ nav.close .logo_slogan{
 }
 
 nav .menu-items{
-    margin-top: 2px;
+    margin-top: 0px;
     height: calc(100% - 90px);
     display: flex;
     flex-direction: column;
@@ -257,6 +257,12 @@ nav.close ~ .dashboard{
     background-color: var(--panel-color);
     transition: var(--tran-05);
     z-index: 10;
+}
+
+.dashboard .top span{
+    text-align: right;
+    margin-left: 750px;
+    color: #7b68ee;
 }
 nav.close ~ .dashboard .top{
     left: 73px;
