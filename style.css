@@ -137,6 +137,31 @@ body{
     justify-content: center;
 }
 
+#about{
+  background-image: url("IMAGES/wallpaper/wallpaper3.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 5% right 0;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#about h4{
+  padding-bottom: 15px;
+}
+
+#about h2{
+  color: #d891ef; 
+}
+#about p{
+  color: #ff0090; 
+}
+
+
 #hero h4{
     padding-bottom: 15px;
 
