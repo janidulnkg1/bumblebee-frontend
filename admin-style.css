@@ -9,8 +9,8 @@
 
 :root{
     /* ===== Colors ===== */
-    --primary-color: #ff00ff ;
-    --panel-color: #fff;
+    --primary-color: #ffc0cb ;
+    --panel-color: #f8f4ff;
     --text-color: #000;
     --black-light-color: #707070;
     --border-color: #e6e5e5;
@@ -118,7 +118,7 @@ nav.close .logo_slogan{
 }
 
 nav .menu-items{
-    margin-top: 40px;
+    margin-top: 2px;
     height: calc(100% - 90px);
     display: flex;
     flex-direction: column;
