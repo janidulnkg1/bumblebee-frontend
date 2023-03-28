@@ -76,7 +76,7 @@ nav{
     transition: var(--tran-05);
 }
 nav.close{
-    width: 73px;
+    width: 77px;
 }
 nav .logo_slogan{
     display: flex;
@@ -395,6 +395,22 @@ nav.close ~ .dashboard .top{
     white-space: nowrap;
     color: var(--text-color);
 }
+table{
+   
+    position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-collapse: collapse;
+        width: 800px;
+        height: 200px;
+        border: 1px solid #bdc3c7;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+table .border{
+
+}
+
 
 @media (max-width: 1000px) {
     nav{
