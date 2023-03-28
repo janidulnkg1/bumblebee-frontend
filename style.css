@@ -158,7 +158,7 @@ body{
   color: #d891ef; 
 }
 #about p{
-  color: #ff0090; 
+  color: #000000; 
 }
 
 
@@ -684,7 +684,7 @@ body{
 
    /* sign up page designing */
    #sign-up-form{
-    background-image: url('/IMAGES/wallpaper/wallpaper2.jpg');
+    background-image: url('/IMAGES/wallpaper/wallpaper5.jpeg');
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -697,7 +697,7 @@ body{
     padding: 80px 80px;
    }
    #sign-up-form label{
-    color: #f0ffff;
+    color: #f0f8ff;
     font-size: 23px;
     font-weight: 800;
    }
@@ -708,7 +708,7 @@ body{
     color: #cce7d0;
    }
   
-/* SHOP PAGE Designing */
+/* PRODUCT PAGE Designing */
 #page-header{
   background-image: url('IMAGES/banner/banner.jpeg');
   background-position: top 20% right 20%;
@@ -912,6 +912,11 @@ body{
     height: 70vh;
     padding: 0 80px;
     background-position: top 30% right 30%;
+  }
+
+  #about p{
+    color: #ff00ff;
+    font-weight: 600;
   }
 
   #login{
