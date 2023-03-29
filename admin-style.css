@@ -9,7 +9,7 @@
 
 :root{
     /* ===== Colors ===== */
-    --primary-color: #ffc0cb ;
+    --primary-color: #da70d6 ;
     --nav-panel-color: #e6e8fa;
     --panel-color:  #dcd0ff ;
     --text-color: #000;
@@ -38,7 +38,7 @@ body.dark{
     --primary-color: #3A3B3C;
     --nav-panel-color: #3A3B3C;
     --panel-color: #242526;
-    --text-color: #7b68ee;
+    --text-color: #ffffff;
     --black-light-color: #CCC;
     --border-color: #4D4C4C;
     --toggle-color: #FFF;
@@ -432,7 +432,7 @@ table{
     font-weight: 500;
 }
 tr:hover {
-    background-color: #ccccff;
+    background-color: #F60380;
     transform: scale(1.02);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
@@ -500,7 +500,7 @@ tr:hover {
 
 @media only screen and (max-width: 820px) {
     table {
-        width: 80%;
+        width: 0%;
         margin-right: 300px;
     }
 }
