@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bumblebee Admin Panel</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <a href="index.html"><img src="IMAGES/logo-icon.png" style="height: 75%; width: 50%;" alt=""></a>
+            </div>
+            <span class="logo_name">Bumblebee</span>
+          
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name active">Dashboard</span>
+                </a></li>
+                <li><a href="admin-productstock.html">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Product Stock</span>
+                </a></li>
+                <li><a href="admin-users.html">
+                    <i class="uil uil-user"></i>
+                    <span class="link-name">Users</span>
+                </a></li>
+                <li><a href="admin-orders.html">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Orders</span>
+                </a></li>
+                <li><a href="admin-customerpaydetails.html">
+                    <i class="uil uil-transaction"></i>
+                    <span class="link-name ">Customer Payments</span>
+                </a></li>
+                      
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="index.html">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            
+            
+            <span>Welcome ADMIN!</span>
+            <img src="IMAGES/profiles/admin/admin.jpg" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-chart"></i>
+                        <span class="text">Successful Orders</span>
+                        <span class="number">11,000</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-user"></i>
+                        <span class="text">Total Users</span>
+                        <span class="number">5900</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="text">Total Products</span>
+                        <span class="number">6,700</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Latest Orders</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
