@@ -10,7 +10,8 @@
 :root{
     /* ===== Colors ===== */
     --primary-color: #ffc0cb ;
-    --panel-color: #ccccff ;
+    --nav-panel-color: #e6e8fa;
+    --panel-color:  #dcd0ff ;
     --text-color: #000;
     --black-light-color: #707070;
     --border-color: #e6e5e5;
@@ -19,6 +20,9 @@
     --box2-color: #f4bbff;
     --box3-color: #E7D1FC;
     --title-icon-color: #fff;
+    --table-head: #9370db;
+    --table-row: #ccccff;
+   
     
     /* ====== Transition ====== */
     --tran-05: all 0.5s ease;
@@ -32,6 +36,7 @@ body{
 }
 body.dark{
     --primary-color: #3A3B3C;
+    --nav-panel-color: #3A3B3C;
     --panel-color: #242526;
     --text-color: #7b68ee;
     --black-light-color: #CCC;
@@ -41,6 +46,8 @@ body.dark{
     --box2-color: #3A3B3C;
     --box3-color: #3A3B3C;
     --title-icon-color: #CCC;
+    --table-head: #696969;
+    --table-row: #848482;
 }
 /* === Custom Scroll Bar CSS === */
 ::-webkit-scrollbar {
@@ -71,7 +78,7 @@ nav{
     height: 100%;
     width: 250px;
     padding: 10px 14px;
-    background-color: #e6e8fa;
+    background-color: var(--nav-panel-color);
     border-right: 1px solid var(--border-color);
     transition: var(--tran-05);
 }
@@ -416,11 +423,13 @@ table{
   }
   
   .table th{
-      background-color: #9370db;
+      background-color: var(--table-head);
       color:#ffffff;
   }
   .table tbody tr{
-	background-color: #f5f5f5;
+	background-color: var(--table-row);
+    color: #ffffff;
+    font-weight: 500;
 }
 tr:hover {
     background-color: #ccccff;
