@@ -9,7 +9,7 @@ $(document).ready(function() {
       };
       $.ajax({
         type: 'POST',
-        url: '/signup',
+        url: 'http://localhost:3000/signup',
         contentType: 'application/json',
         data: JSON.stringify(formData),
         success: function(response) {
