@@ -1,33 +1,29 @@
-
-const loginForm = document.querySelector('#login-form');
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
-
-// Add event listener to form submit event
-loginForm.addEventListener('submit', async (event) => {
-  // Prevent default form submission behavior
+function handleLogin(event) {
   event.preventDefault();
-
-  // Get username and password values from input fields
-  const username = emailInput.value;
-  const password = passwordInput.value;
-
-  try {
-    // Send a POST request to the login API endpoint
-    const response = await axios.post('/login', {
-      username,
-      password,
+  const formData = new FormData(event.target);
+  const userData = {
+    email: formData.get('email'),
+    password: formData.get('password'),
+  };
+  fetch('http://localhost:9191/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      // handle success
+    })
+    .catch(error => {
+      console.error('Fetch operation error:', error);
+      // handle error
     });
-
-    // If login is successful, store the token in local storage
-    const token = response.data.token;
-    localStorage.setItem('token', token);
-
-    // Redirect to the dashboard or home page
-    window.location.href = '/dashboard';
-  } catch (error) {
-    // If login fails, display an error message to the user
-    console.error(error);
-    alert('Login failed. Please try again.');
-  }
-});
+}
