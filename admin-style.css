@@ -437,6 +437,25 @@ tr:hover {
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 
+.table button {
+  margin: 50px 50px;
+  width: 170px;
+  height: 60px;
+  border: 2px solid #AD5BDF;
+  border-radius: 35px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1opx;
+  font-weight: 650;
+  font-family: 'Montserrat', sans-serif;
+}
+.table button:hover {
+    background: #F60380;
+    color: white;
+    font-size: 20px;
+  }
+
 
 
 
