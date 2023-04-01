@@ -1,24 +1,31 @@
-const form = document.getElementById("signup-form");
-  const signupButton = document.getElementById("signup-button");
-
-  signupButton.addEventListener("click", function(event) {
-    event.preventDefault();
-    
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    
-    const requestOptions = {
-      method: 'POST',
-      body: JSON.stringify({firstName: firstName, lastName: lastName,email: email, password: password}),
-      headers: {
-        'Content-Type': 'application/json'
+function handleSignup(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const userData = {
+    firstName: formData.get('firstName'),
+    lastName: formData.get('lastName'),
+    email: formData.get('email'),
+    password: formData.get('password'),
+  };
+  fetch('http://localhost:9191/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(userData)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
       }
-    };
-    
-    fetch('http://localhost:9191/signup', requestOptions)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
-  });
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      // handle success
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+      // handle error
+    });
+}
