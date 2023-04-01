@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="signup-style.css" />
+    
 </head>
 <body>
     
@@ -35,24 +35,24 @@
     </section>
 
    <section id="sign-up-form">
-    <form id="signup-form" onSubmit="handleSignup(event)">
+    <form id="signup-form" onSubmit="handleSignup(event), showLoginSuccess()">
         <div class="form-group">
             <label for="inputAddress">First Name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Simon" name="firstName">
+            <input type="text" class="form-control" id="firstName" placeholder="Simon" name="firstName" required>
           </div>
           <div class="form-group">
             <label for="inputAddress2">Last Name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Perera" name="lastName">
+            <input type="text" class="form-control" id="lastName" placeholder="Perera" name="lastName" required>
           </div>
           <div class="form-group">
             <label for="inputAddress2">Email Address</label>
-            <input type="email" class="form-control" id="email" placeholder="psimon@gmail.com" name="email">
+            <input type="email" class="form-control" id="email" placeholder="psimon@gmail.com" name="email" required>
           </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="***************" name="password">
+            <input type="password" class="form-control" id="password" placeholder="***************" name="password" required>
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Confirm Password</label>

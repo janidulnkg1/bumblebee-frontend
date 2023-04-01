@@ -13,6 +13,7 @@ function handleSignup(event) {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(userData)
+    
   })
     .then(response => {
       if (!response.ok) {
@@ -22,10 +23,26 @@ function handleSignup(event) {
     })
     .then(data => {
       console.log(data);
+      alert("Account Creation Successful!");
+
       // handle success
     })
     .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
+      console.log('Account Creation Error!', error);
       // handle error
     });
+}
+
+function showLoginSuccess(){
+  alert("Account Created Successfully!");
+  resetForm(); 
+  reloadPage();
+}
+
+function resetForm() {
+  form.reset(); 
+}
+
+function reloadPage() {
+  location.reload();
 }
