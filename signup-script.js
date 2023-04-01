@@ -15,34 +15,16 @@ function handleSignup(event) {
     body: JSON.stringify(userData)
     
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      alert("Account Creation Successful!");
-
-      // handle success
-    })
-    .catch(error => {
-      console.log('Account Creation Error!', error);
-      // handle error
-    });
-}
-
-function showLoginSuccess(){
-  alert("Account Created Successfully!");
-  resetForm(); 
-  reloadPage();
-}
-
-function resetForm() {
-  form.reset(); 
-}
-
-function reloadPage() {
-  location.reload();
+  .then(response => {
+    if (response.status === 200) {
+      window.location.href = 'login.html';
+      alert("Account created Successfully!");
+    } else {
+      alert("Account creation failed!");
+    }
+  })
+  .catch(error => {
+    console.error('Fetch operation error:', error);
+    // handle error
+  });
 }

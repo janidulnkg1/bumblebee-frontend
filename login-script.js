@@ -12,18 +12,16 @@ function handleLogin(event) {
     },
     body: JSON.stringify(userData)
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-      // handle success
-    })
-    .catch(error => {
-      console.error('Fetch operation error:', error);
-      // handle error
-    });
+  .then(response => {
+    if (response.status === 200) {
+      window.location.href = 'admin-dashboard.html';
+      alert("Admin Login Successful!");
+    } else {
+      alert("Invalid Login! Please Try again.");
+    }
+  })
+  .catch(error => {
+    console.error('Fetch operation error:', error);
+    // handle error
+  });
 }
