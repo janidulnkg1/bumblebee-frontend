@@ -1,23 +1,24 @@
-$(document).ready(function() {
-    $('#signupForm').submit(function(event) {
-      event.preventDefault();
-      var formData = {
-        email: $('#email').val(),
-        password: $('#password').val(),
-        firstName: $('#firstName').val(),
-        lastName: $('#lastName').val()
-      };
-      $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/signup',
-        contentType: 'application/json',
-        data: JSON.stringify(formData),
-        success: function(response) {
-          $('#message').text(response);
-        },
-        error: function(xhr, status, error) {
-          $('#message').text(xhr.responseText);
-        }
-      });
-    });
+const form = document.getElementById("signup-form");
+  const signupButton = document.getElementById("signup-button");
+
+  signupButton.addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    
+    const requestOptions = {
+      method: 'POST',
+      body: JSON.stringify({firstName: firstName, lastName: lastName,email: email, password: password}),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+    
+    fetch('http://localhost:9191/signup', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
   });

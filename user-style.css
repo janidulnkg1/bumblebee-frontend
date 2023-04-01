@@ -248,6 +248,7 @@ body.dark .switch:before{
     padding: 5px 5px;
     transition: var(--tran-05);
 }
+
 nav.close ~ .dashboard{
     left: 73px;
     width: calc(100% - 73px);
@@ -265,6 +266,18 @@ nav.close ~ .dashboard{
     transition: var(--tran-05);
     z-index: 10;
 }
+.dashboard .top .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: purple;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    
+  }
 
 .dashboard .top span{
     text-align: right;
@@ -438,6 +451,10 @@ tr:hover {
 }
 #product1{
     text-align: center;
+  }
+
+  #product1 h2{
+    
   }
 
   #product1 .pro-container{
