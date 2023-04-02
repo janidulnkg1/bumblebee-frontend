@@ -90,6 +90,8 @@
     </section>
 
     <script>
+    
+
         fetch('http://localhost:9191/leases')
           .then(response => response.json())
           .then(data => {
@@ -107,7 +109,7 @@
         
               customerLeaseIDCell.textContent = lease.customerLeaseID;
               customerNameCell.textContent = lease.customerName;
-              DOBCell.textContent = lease.DOB;
+              DOBCell.textContent = new Date(lease.dateOfBirth).toLocaleDateString('en-GB');
               loanBalanceCell.textContent = lease.loanBalance;
               installmentPlanCell.textContent = lease.installmentPlan;
               planStatusCell.textContent = lease.planStatus;
