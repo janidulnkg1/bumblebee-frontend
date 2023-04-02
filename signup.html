@@ -37,26 +37,29 @@
    <section id="sign-up-form">
     <form id="signup-form" onSubmit="handleSignup(event), showLoginSuccess()">
         <div class="form-group">
-            <label for="inputAddress">First Name</label>
+            <label for="firstName">First Name</label>
             <input type="text" class="form-control" id="firstName" placeholder="Simon" name="firstName" required>
           </div>
           <div class="form-group">
-            <label for="inputAddress2">Last Name</label>
+            <label for="lastName">Last Name</label>
             <input type="text" class="form-control" id="lastName" placeholder="Perera" name="lastName" required>
           </div>
           <div class="form-group">
-            <label for="inputAddress2">Email Address</label>
+            <label for="email">Email Address</label>
             <input type="email" class="form-control" id="email" placeholder="psimon@gmail.com" name="email" required>
+            <span id="emailError" style="color: red; display: none;">Please enter a valid email address<i class="fas fa-times" style="color: #f10909;"></i></span>
+
           </div>
 
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Password</label>
+            <label for="password">Password</label>
             <input type="password" class="form-control" id="password" placeholder="***************" name="password" required>
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">Confirm Password</label>
-            <input type="password" class="form-control" id="confirmPassword" placeholder="***************">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="***************" required>
+            <span id="passwordError" style="color: red;font-weight: 600; display: none;">Passwords do not match <i class="fas fa-times" style="color: #f10909;"></i></span>
           </div>
         </div>
     
@@ -106,6 +109,45 @@
             <p>© Bumblebee 2023, Developed By: © NXTInnov8ions  </p>
         </div>
     </footer>
+
+
+    <script>
+        var emailInput = document.getElementById("email");
+        var emailError = document.getElementById("emailError");
+        
+        emailInput.addEventListener("blur", function() {
+          if (!emailInput.value.includes("@") || emailInput.value.includes(" ")) {
+            emailError.style.display = "inline";
+          } else {
+            emailError.style.display = "none";
+          }
+        });
+        </script>
+
+    <script>
+        var passwordInput = document.getElementById("password");
+        var confirmPasswordInput = document.getElementById("confirmPassword");
+        var passwordError = document.getElementById("passwordError");
+        
+        function checkPasswords() {
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            passwordError.style.display = "inline";
+            return false;
+          } else {
+            passwordError.style.display = "none";
+            return true;
+          }
+        }
+        
+        passwordInput.addEventListener("input", checkPasswords);
+        confirmPasswordInput.addEventListener("input", checkPasswords);
+        
+        document.querySelector("form").addEventListener("submit", function(event) {
+          if (!checkPasswords()) {
+            event.preventDefault();
+          }
+        });
+        </script>  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="signup-script.js"></script>
     <script src="script.js"></script>
