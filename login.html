@@ -46,15 +46,15 @@
                 <div class="form-content">
                   <div class="login-form">
                     <div class="title">User Login</div>
-                  <form id="userlogin-form" onSubmit="handleLogin(event)">
+                  <form id="userlogin-form" onSubmit="handleUserLogin(event)">
                     <div class="input-boxes">
                       <div class="input-box">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Enter your email" name="email" id="email" required>
+                        <input type="text" placeholder="Enter your email" name="user-email" id="user-email" required>
                       </div>
                       <div class="input-box">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Enter your password" name="password" id="password" required>
+                        <input type="password" placeholder="Enter your password" name="user-password" id="user-password" required>
                       </div>
                       <div class="text"><a href="#">Show password</a></div>
                       <div class="button input-box">
@@ -68,21 +68,21 @@
               </div>
                 <div class="signup-form">
                   <div class="title">Admin Login</div>
-                  <form id="adminlogin-form" onSubmit="handleLogin(event)">
+                  <form id="adminlogin-form" onSubmit="handleAdminLogin(event)">
                     <div class="input-boxes">
                       <div class="input-box">
                         <i class="fas fa-envelope"></i>
-                        <input type="text" placeholder="Enter your email" name="email" id="email" required>
+                        <input type="text" placeholder="Enter your email" name="admin-email" id="admin-email" required>
                       </div>
                       <div class="input-box">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Enter your password" name="password" id="password" required>
+                        <input type="password" placeholder="Enter your password" name="admin-password" id="admin-password" required>
                       </div>
                       <div class="text"><a href="#">Show password</a></div>
                       <div class="button input-box">
                         <input type="submit" value="Login">
                       </div>
-                      <div class="text sign-up-text"><label for="flip">Login as User </label>
+                      <div class="text switch-login"><label for="flip">Login as User </label>
                        
                     </div>
                     </div>
@@ -302,13 +302,6 @@
 }
           </style>
    
-
-
-    
-    
-
-   
-
     <footer class="section-p1">
         <div class="col">
             <a href="index.html"><img src="./IMAGES/logo.png" class="logo" alt=""></a>
@@ -349,7 +342,8 @@
             <p>© Bumblebee 2023, Developed By: © NXTInnov8ions  </p>
         </div>
     </footer>
-    <script src="login-script.js"></script>
+    <script src="userlogin-script.js"></script>
+    <script src="adminlogin-script.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

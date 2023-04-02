@@ -1,11 +1,11 @@
-function handleLogin(event) {
+function handleUserLogin(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const userData = {
-    email: formData.get('email'),
-    password: formData.get('password'),
+    email: formData.get('user-email'),
+    password: formData.get('user-password'),
   };
-  fetch('http://localhost:9191/login', {
+  fetch('http://localhost:9191/user_login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -14,8 +14,8 @@ function handleLogin(event) {
   })
   .then(response => {
     if (response.status === 200) {
-      window.location.href = 'admin-dashboard.html';
-      alert("Admin Login Successful!");
+      window.location.href = 'user-dashboard.html';
+      alert("User Login Successful!");
     } else {
       alert("Invalid Login! Please Try again.");
     }
@@ -25,3 +25,4 @@ function handleLogin(event) {
     // handle error
   });
 }
+
