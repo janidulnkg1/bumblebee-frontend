@@ -11,7 +11,8 @@
     /* ===== Colors ===== */
     --primary-color: #da70d6 ;
     --nav-panel-color: #e6e8fa;
-    --panel-color:  #dcd0ff ;
+    --main-panel-color: #dcd0ff ;
+    --panel-color:  #ccccff ;
     --text-color: #000;
     --black-light-color: #707070;
     --border-color: #e6e5e5;
@@ -32,11 +33,12 @@
 
 body{
     min-height: 100vh;
-    background-color: var(--primary-color);
+    background-color: var(--main-panel-color);
 }
 body.dark{
     --primary-color: #3A3B3C;
     --nav-panel-color: #3A3B3C;
+    --main-panel-color: #4D4C4C;
     --panel-color: #242526;
     --text-color: #ffffff;
     --black-light-color: #CCC;
@@ -243,10 +245,11 @@ body.dark .switch:before{
     position: relative;
     left: 250px;
     background-color: var(--panel-color);
-    min-height: 100vh;
+    min-height: 5vh;
     width: calc(100% - 250px);
     padding: 10px 14px;
     transition: var(--tran-05);
+    margin-bottom: 20px;
 }
 nav.close ~ .dashboard{
     left: 73px;
@@ -402,21 +405,21 @@ nav.close ~ .dashboard .top{
     white-space: nowrap;
     color: var(--text-color);
 }
-table{
+ .table{
    
-    position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-collapse: collapse;
-        width: 800px;
-        height: 200px;
-        border: 1px solid #bdc3c7;
-        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
-        margin-left: 50px;
+    position: relative;
+    left: 40%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    border-collapse: collapse;
+    width: 60%;
+    height: 50px;
+    margin-left: 250px;
+    margin-top: 100px;
+        
 }
 .table td,.table th{
-    padding:12px 15px;
+    padding:8px ;
     border:1px solid #ddd;
     text-align: center;
     font-size:16px;
@@ -525,17 +528,32 @@ tr:hover {
    
 }
 @media only screen and (max-width: 768px) {
-    table {
-        width: 70%;
+    .table {
+        width: 50%;
         margin-right: 300px;
     }
 }
 
-@media only screen and (max-width: 820px) {
-    table {
-        width: 0%;
+@media screen and (max-width: 820px) {
+    .table {
+        width: 50%;
         margin-right: 300px;
+        font-size: 14px;
+        display: block;
+        
     }
+    th,td{
+        padding: 6px;
+    }
+    td,th{
+        display: block;
+            text-align: right;
+    }
+    td:not(:last-child) {
+        margin-bottom: 1em;
+    }
+
+
 }
 
 @media (max-width: 560px) {
