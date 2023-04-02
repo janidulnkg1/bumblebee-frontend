@@ -74,7 +74,7 @@
     </section>
 
     <section class="table">
-        <table>
+        <table id="lease-table">
             <tr id="header">
                 <th>Customer Lease ID</th>
                 <th>Customer Name</th>
@@ -82,11 +82,52 @@
                 <th>Loan Balance</th>
                 <th>Installment Plan</th>
                 <th>Plan Status</th>
+                <th>Manage Plan</th>
                 
             </tr>
         </table>
           
     </section>
+
+    <script>
+        fetch('http://localhost:9191/leases')
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.querySelector('#lease-table tbody');
+            data.forEach(lease => {
+              const row = document.createElement('tr');
+              const customerLeaseIDCell = document.createElement('td');
+              const customerNameCell = document.createElement('td');
+              const DOBCell = document.createElement('td');
+              const loanBalanceCell = document.createElement('td');
+              const installmentPlanCell = document.createElement('td');
+              const planStatusCell = document.createElement('td');
+              const action = document.createElement('button')
+        
+              customerLeaseIDCell.textContent = lease.customerLeaseID;
+              customerNameCell.textContent = lease.customerName;
+              DOBCell.textContent = lease.DOB;
+              loanBalanceCell.textContent = lease.loanBalance;
+              installmentPlanCell.textContent = lease.installmentPlan;
+              planStatusCell.textContent = lease.planStatus;
+              action.textContent = 'Remove';
+              action.setAttribute('id', 'btn-delete');
+        
+              row.appendChild(customerLeaseIDCell);
+              row.appendChild(customerNameCell);
+              row.appendChild(DOBCell);
+              row.appendChild(loanBalanceCell);
+              row.appendChild(installmentPlanCell);
+              row.appendChild(planStatusCell);
+              row.appendChild(action);
+              tableBody.appendChild(row);
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+        </script>
+
 
     <script src="admin-script.js"></script>
 </body>
