@@ -7,7 +7,7 @@ function handleSignup(event) {
     email: formData.get('email'),
     password: formData.get('password'),
   };
-  fetch('http://localhost:9191/signup', {
+  fetch('http://localhost:9191/user_signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
