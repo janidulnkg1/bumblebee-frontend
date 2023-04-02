@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     
+    
 </head>
 <body>
     <nav>
@@ -77,33 +78,93 @@
         <table>
             <tr id="header">
                 <th>Product ID</th>
-                <th>Product Name</th>
-                <th>Price (LKR)</th>
-                <th>Available Quantity</th>
+                <th>Item Type</th>
+                <th>Item Brand</th>
+                <th>Item Name</th>
+                <th>Item Size</th>
+                <th>Item Price (LKR)</th>
+                <th>Item Quantity</th>
                 <th>Manage Stock</th>
             </tr>
             <tr>
                 <td>0001 </td>
-                <td>Nike Lebrons </td>
+                <td>Shoes  </td>
+                <td>Nike  </td>
+                <td>Lebrons  </td>
+                <td>L </td>
                 <td>75000 </td>
                 <td>5 </td>
                 <td><button id="add">+</button>
                     <button id="remove">-</button>
                      </td>
             </tr>
-            <tr>
-                <td>0002 </td>
-                <td>Hilfiger Tshirt</td>
-                <td>7000 </td>
-                <td>6 </td>
-                <td><button id="add">+</button>
-                    <button id="remove">-</button>
-                     </td>
-            </tr>
-            
-    
         </table>
-          
+    </section>
+
+    <section id="stock-control">
+        <form id="stock-form" class="stock-form" onSubmit="">
+            <div class="form-group">
+                <label for="item-type">Item Type:</label>
+                <select id="type-select" name="item-type" >
+                    <option value="none">Select..</option>
+                    <option value="Hats">Hats</option>
+                    <option value="Shirts">Shirts</option>
+                    <option value="Shirts">T-Shirts</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Formal Wear">Formal Wear</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Shorts">Shorts</option>
+                    <option value="Shoes">Shoes</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="item-brand">Item Brand:</label>
+                <select id="type-select" name="item-type" >
+                    <option value="unbranded">Select..</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Jordans">Jordans</option>
+                    <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+                    <option value="Kelly Felder">Kelly Felder</option>
+                    <option value="Benetton">Benetton</option>
+                    <option value="Envoy">Envoy</option>
+                    <option value="Moose">Moose</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="item-name">Item Name:</label>
+                <input type="text" class="form-control" id="item-name"  name="item-name" required>
+              </div>
+              <div class="form-group">
+                <label for="item-size">Item Size:</label>
+                <select id="type-select" name="item-size" >
+                    <option value="none">Select..</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XXXL">XXXL</option>
+                  </select>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" required>
+              </div>
+              <div class="form-group">
+                <label for="item-quantity">Item Quantity:</label>
+                <input type="text" class="form-control" id="item-quantity"  name="item-quantity" required>
+              </div>
+              
+
+             
+    
+            <div class="form-row">
+              
+        
+            <button id="additem-button" type="submit" class="btn-additem">Add Item</button>
+          </form>
     </section>
 
     <script src="admin-script.js"></script>
