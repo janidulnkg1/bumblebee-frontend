@@ -473,6 +473,78 @@ tr:hover {
     transform: translateX(0);
    }
 
+   .table .btn-update{
+    color: #df73ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  margin-left: 60px;
+   }
+   .table .btn-update:hover {
+    color: white;
+  }
+  
+  .table .btn-update::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #f4bbff;
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .table .btn-update:hover::before {
+    width: 160%;
+  }
+  .table .btn-remove{
+    color: #F60380;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid purple;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 80px;
+   }
+   .table .btn-remove:hover {
+    color: white;
+  }
+  
+  .table .btn-remove::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #F60380;
+    z-index: -1;
+    transition: all 1s;
+  }
+  
+  .table .btn-remove:hover::before {
+    width: 160%;
+  }
+
+
 
 
 

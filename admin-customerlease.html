@@ -74,7 +74,7 @@
     </section>
 
     <section class="table">
-        <table id="lease-table">
+        <table id="lease-table" class="lease_table">
             <tr id="header">
                 <th>Customer Lease ID</th>
                 <th>Customer Name</th>
@@ -102,7 +102,8 @@
               const loanBalanceCell = document.createElement('td');
               const installmentPlanCell = document.createElement('td');
               const planStatusCell = document.createElement('td');
-              const action = document.createElement('button')
+              const action1 = document.createElement('button')
+              const action2 = document.createElement('button')
         
               customerLeaseIDCell.textContent = lease.customerLeaseID;
               customerNameCell.textContent = lease.customerName;
@@ -110,8 +111,12 @@
               loanBalanceCell.textContent = lease.loanBalance;
               installmentPlanCell.textContent = lease.installmentPlan;
               planStatusCell.textContent = lease.planStatus;
-              action.textContent = 'Remove';
-              action.setAttribute('id', 'btn-delete');
+              action1.textContent = 'Set as Complete';
+              action1.setAttribute('id', 'btn-update');
+              action1.setAttribute('class', 'btn-update');
+              action2.textContent = 'Delete Plan';
+              action2.setAttribute('id', 'btn-remove');
+              action2.setAttribute('class', 'btn-remove');
         
               row.appendChild(customerLeaseIDCell);
               row.appendChild(customerNameCell);
@@ -119,7 +124,9 @@
               row.appendChild(loanBalanceCell);
               row.appendChild(installmentPlanCell);
               row.appendChild(planStatusCell);
-              row.appendChild(action);
+              row.appendChild(action1);
+              row.appendChild(action2);
+              
               tableBody.appendChild(row);
             });
           })
