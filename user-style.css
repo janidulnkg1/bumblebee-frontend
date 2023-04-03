@@ -632,11 +632,11 @@ tr:hover {
   }
   
   #shopping-page p{
-    color: #dcd0ff;
+    color: #ffffff;
     margin-top: 10px;
     font-size: 30;
-    margin-left: 240px;
-    font-weight: 500;
+    margin-left: 270px;
+    font-weight: 800;
   }
   
   #shopping-page:hover span{
