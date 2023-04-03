@@ -654,9 +654,9 @@ tr:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 300px;
+    margin-left: 250px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 30px;
 
   }
 #leasing h2{
