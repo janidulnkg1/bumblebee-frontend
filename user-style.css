@@ -655,7 +655,7 @@ tr:hover {
     justify-content: center;
     margin-left: 300px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 20px;
 
   }
 #leasing h2{
@@ -725,7 +725,7 @@ tr:hover {
 }
 
 
-#leasing .btn-additem {
+#leasing .btn-addlease {
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
@@ -743,14 +743,14 @@ tr:hover {
     margin-top: 10px;
   }
   
-  #leasing .btn-additem:hover {
+  #leasing .btn-addlease:hover {
     background-color: #AD5BDF;
     box-shadow: 0px 15px 20px rgba(174, 46, 229, 0.4);
     color: #fff;
     transform: translateY(-7px);
   }
   
-  #leasing .btn-additem:active {
+  #leasing .btn-addlease:active {
     transform: translateY(-1px);
   }
 
