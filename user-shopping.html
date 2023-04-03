@@ -361,7 +361,7 @@
         <form id="lease-form" class="lease-form" onSubmit="handleAddItem(event)">
             <div class="input-field">
                 <label for="item-customername">Full Name:</label>
-                <input type="text" class="input" id="customerfname" placeholder="Enter First and Last Name only" name="customer-fullname" required>
+                <input type="text" class="input" id="customerfullname" placeholder="Enter First and Last Name only" name="customer-fullname" required>
               </div>
               <div class="input-field">
                 <label for="item-DOB">Date of Birth:</label>
@@ -414,6 +414,43 @@ dobInput.addEventListener("change", () => {
   }
 });
     </script>
+
+<script>
+    function handleAddItem(event) {
+event.preventDefault();
+const formData = new FormData(event.target);
+const leaseData = {
+customerName: formData.get('customer-fullname'),
+dateOfBirth: formData.get('customer-dob'),
+loanBalance: formData.get('loan-balance'),
+installmentPlan: formData.get('installment-plan'),
+planStatus: formData.get('plan-status'),
+
+
+};
+fetch('http://localhost:9191/lease_apply', {
+method: 'POST',
+headers: {
+  'Content-Type': 'application/json'
+},
+body: JSON.stringify(userData)
+
+})
+.then(response => {
+if (response.status === 200) {
+  alert("Customer Lease Made Successfully!");
+  window.location.href = 'user-shopping.html';
+  loca
+} else {
+  alert("Lease has not been added!");
+}
+})
+.catch(error => {
+console.error('Fetch operation error:', error);
+// handle error
+});
+}
+</script>
 
     
     </script>
