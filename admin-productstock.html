@@ -90,7 +90,7 @@
     </section>
 
     <section id="stock-control">
-        <form id="stock-form" class="stock-form" onSubmit="">
+        <form id="stock-form" class="stock-form" onSubmit="handleAddItem(event)">
             <div class="input-field">
                 <label for="item-type">Item Type:</label>
                 <select id="type-select" class="input" name="item-type" >
@@ -150,14 +150,17 @@
     </section>
 
     <script>
-        function handleSignup(event) {
+        function handleAddItem(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const userData = {
-    firstName: formData.get('firstName'),
-    lastName: formData.get('lastName'),
-    email: formData.get('email'),
-    password: formData.get('password'),
+    itemType: formData.get('item-type'),
+    itemBrand: formData.get('item-brand'),
+    itemName: formData.get('item-name'),
+    itemSize: formData.get('item-size'),
+    itemPrice: formData.get('item-price'),
+    itemQuantity: formData.get('item-quantity'),
+
   };
   fetch('http://localhost:9191/stock_additem', {
     method: 'POST',
@@ -169,10 +172,9 @@
   })
   .then(response => {
     if (response.status === 200) {
-      window.location.href = 'login.html';
-      alert("Account created Successfully!");
+      alert("Item Added Successfully!");
     } else {
-      alert("Account creation failed!");
+      alert("Item has not been added!");
     }
   })
   .catch(error => {
