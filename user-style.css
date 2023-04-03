@@ -608,6 +608,41 @@ tr:hover {
     bottom: 5px;
     right: 10px;
   }
+  #shopping-page{
+    background-image: url('IMAGES/banner/shopping.jpg');
+    background-position: top 20% right 20%;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    padding: 14px;
+    margin-bottom: 40px;
+  }
+  
+  #shopping-page h2{
+    color: #F60380;
+    font-weight: 800;
+    font-size: 50px;
+    margin-left: 240px;
+    
+    
+  }
+  
+  #shopping-page p{
+    color: #dcd0ff;
+    margin-top: 10px;
+    font-size: 30;
+    margin-left: 240px;
+    font-weight: 500;
+  }
+  
+  #shopping-page:hover span{
+    color: #9457eb;
+    font-weight: 600;
+  }
 
 
 
