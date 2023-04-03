@@ -358,7 +358,7 @@
     <section id="leasing">
         <h2>Apply For an Installment Payment</h2>
         <div id="dob-warning" style="display:none;color:red;">You are under the age of 18, Leasing Facility is NOT APPLICABLE to minors!!!</div>
-        <form id="lease-form" class="lease-form" onSubmit="handleAddItem(event)">
+        <form id="lease-form" class="lease-form" onSubmit="handleAddLease(event)">
             <div class="input-field">
                 <label for="item-customername">Full Name:</label>
                 <input type="text" class="input" id="customerfullname" placeholder="Enter First and Last Name only" name="customer-fullname" required>
@@ -416,7 +416,7 @@ dobInput.addEventListener("change", () => {
     </script>
 
 <script>
-    function handleAddItem(event) {
+    function handleAddLease(event) {
 event.preventDefault();
 const formData = new FormData(event.target);
 const leaseData = {
@@ -433,7 +433,7 @@ method: 'POST',
 headers: {
   'Content-Type': 'application/json'
 },
-body: JSON.stringify(userData)
+body: JSON.stringify(leaseData)
 
 })
 .then(response => {
