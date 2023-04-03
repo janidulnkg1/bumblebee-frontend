@@ -441,7 +441,7 @@ tr:hover {
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 
-.user_table button {
+.user_table,.admin_table button {
   margin: 50px 50px;
   display: inline-block;
  padding: 0.9rem 1.8rem;
@@ -457,7 +457,7 @@ tr:hover {
  z-index: 1;
  font-family: inherit;
 }
-.user_table button::before {
+.user_table,.admin_table button::before {
     content: "";
     position: absolute;
     left: 0;
@@ -470,7 +470,7 @@ tr:hover {
     z-index: -1;
    }
    
-   .user_table button:hover::before {
+   .user_table,.admin_table button:hover::before {
     transform: translateX(0);
    }
 
