@@ -33,6 +33,7 @@
 body{
     min-height: 100vh;
     background-color: var(--primary-color);
+    min-width: 1000px;
 }
 body.dark{
     --primary-color: #3A3B3C;
@@ -449,7 +450,7 @@ tr:hover {
     transform: scale(1.02);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
-#product1{
+  #product1{
     text-align: center;
   }
 
@@ -741,6 +742,7 @@ tr:hover {
     outline: none;
     margin-left: 80px;
     margin-top: 10px;
+    margin-bottom: 20px;
   }
   
   #leasing .btn-addlease:hover {

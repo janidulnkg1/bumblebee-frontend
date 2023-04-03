@@ -589,6 +589,8 @@ tr:hover {
     justify-content: center;
     margin-left: 300px;
     position: relative;
+    margin-top: 100px;
+    margin-bottom: 30px;
 
   }
 #stock-control h2{
@@ -657,7 +659,6 @@ tr:hover {
     color:  --text-color;
 }
 
-
 #stock-control .btn-additem {
     padding: 1.3em 3em;
     font-size: 12px;
@@ -674,6 +675,7 @@ tr:hover {
     outline: none;
     margin-left: 80px;
     margin-top: 10px;
+    margin-bottom: 30px;
   }
   
   #stock-control .btn-additem:hover {
