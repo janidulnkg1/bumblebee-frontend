@@ -621,6 +621,7 @@ tr:hover {
     flex-direction: column;
     padding: 14px;
     margin-bottom: 40px;
+    margin-left: 77px;
   }
   
   #shopping-page h2{
@@ -644,6 +645,10 @@ tr:hover {
     color: #9bddff;
     font-weight: 1000px;
   }
+  #shopping-page .a:hover{
+    color: #ffffff;
+  }
+
   #leasing{
     height: 80vh;
     width: 100%;
