@@ -128,6 +128,24 @@
               action2.textContent = 'Cancel Order';
               action2.setAttribute('id', 'btn-remove');
               action2.setAttribute('class', 'btn-remove');
+
+              action2.addEventListener('click', () => {
+        const confirmed = confirm('Are you sure you want to delete this order?');
+        if (confirmed) {
+          fetch(`http://localhost:9191/orders/${orderID}`, {
+            method: 'DELETE'
+          })
+            .then(response => response.json())
+            .then(data => {
+              // Remove row from table
+              row.remove();
+              alert('Order deleted successfully');
+            })
+            .catch(error => {
+              console.error('Error deleting order:', error);
+            });
+        }
+      });
         
               row.appendChild(orderIDCell);
               row.appendChild(customerNameCell);
