@@ -74,22 +74,8 @@
         </div> 
     </section>
 
-    <section class="table">
-        <table>
-            <tr id="header">
-                <th>Product ID</th>
-                <th>Item Type</th>
-                <th>Item Brand</th>
-                <th>Item Name</th>
-                <th>Item Size</th>
-                <th>Item Price (LKR)</th>
-                <th>Item Quantity</th>
-                <th>Manage Stock</th>
-            </tr>
-        </table>
-    </section>
-
     <section id="stock-control">
+        <h2>Stock Entry Form</h2>
         <form id="stock-form" class="stock-form" onSubmit="handleAddItem(event)">
             <div class="input-field">
                 <label for="item-type">Item Type:</label>
@@ -97,7 +83,7 @@
                     <option value="none">Select Type..</option>
                     <option value="Hats">Hats</option>
                     <option value="Shirts">Shirts</option>
-                    <option value="Shirts">T-Shirts</option>
+                    <option value="T-Shirts">T-Shirts</option>
                     <option value="Tops">Tops</option>
                     <option value="Dresses">Dresses</option>
                     <option value="Formal Wear">Formal Wear</option>
@@ -149,6 +135,23 @@
           </form>
     </section>
 
+    <section class="table">
+        <table class="stock_table" id="stocktable">
+            <tr id="header">
+                <th>Product ID</th>
+                <th>Item Type</th>
+                <th>Item Brand</th>
+                <th>Item Name</th>
+                <th>Item Size</th>
+                <th>Item Price (LKR)</th>
+                <th>Item Quantity</th>
+                <th>Manage Stock</th>
+            </tr>
+        </table>
+    </section>
+
+    
+
     <script>
         function handleAddItem(event) {
   event.preventDefault();
@@ -173,6 +176,8 @@
   .then(response => {
     if (response.status === 200) {
       alert("Item Added Successfully!");
+      window.location.href = 'admin-productstock.html';
+      loca
     } else {
       alert("Item has not been added!");
     }
@@ -182,6 +187,63 @@
     // handle error
   });
 }
+    </script>
+
+<script>
+    
+
+    fetch('http://localhost:9191/stocks')
+      .then(response => response.json())
+      .then(data => {
+        const tableBody = document.querySelector('#stocktable tbody');
+        data.forEach(stock => {
+          const row = document.createElement('tr');
+          const productIDCell = document.createElement('td');
+          const itemTypeCell = document.createElement('td');
+          const itemBrandCell = document.createElement('td');
+          const itemNameCell = document.createElement('td');
+          const itemSizeCell = document.createElement('td');
+          const itemPriceCell = document.createElement('td');
+          const itemQuantityCell = document.createElement('td');
+          const action1 = document.createElement('button')
+          const action2 = document.createElement('button')
+          const action3 = document.createElement('button')
+    
+          productIDCell.textContent = stock.productID;
+          itemTypeCell.textContent = stock.itemType;
+          itemBrandCell.textContent = stock.itemBrand;
+          itemNameCell.textContent = stock.itemName;
+          itemSizeCell.textContent = stock.itemSize;
+          itemPriceCell.textContent = stock.itemPrice;
+          itemQuantityCell.textContent = stock.itemQuantity;
+
+          action1.textContent = '+';
+          action1.setAttribute('id', 'btn-update');
+          action1.setAttribute('class', 'btn-update');
+          action2.textContent = '-';
+          action2.setAttribute('id', 'btn-update');
+          action2.setAttribute('class', 'btn-update');
+          action3.textContent = 'Remove';
+          action3.setAttribute('id', 'btn-remove');
+          action3.setAttribute('class', 'btn-remove');
+    
+          row.appendChild(productIDCell);
+          row.appendChild(itemTypeCell);
+          row.appendChild(itemBrandCell);
+          row.appendChild(itemNameCell);
+          row.appendChild(itemSizeCell);
+          row.appendChild(itemPriceCell);
+          row.appendChild(itemQuantityCell);
+          row.appendChild(action1);
+          row.appendChild(action2);
+          row.appendChild(action3);
+          
+          tableBody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
     </script>
     <script src="admin-script.js"></script>
 </body>

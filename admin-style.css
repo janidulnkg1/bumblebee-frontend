@@ -409,13 +409,13 @@ nav.close ~ .dashboard .top{
    
     position: relative;
     left: 40%;
-    top: 10%;
+    top: 20%;
     transform: translate(-50%, -50%);
     border-collapse: collapse;
     width: 60%;
     height: 50px;
     margin-left: 250px;
-    margin-top: 100px;
+    margin-bottom: 100px;
         
 }
 .table td,.table th{
@@ -545,7 +545,7 @@ tr:hover {
   }
 
   #stock-control{
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: top 5% right 0;
@@ -554,11 +554,17 @@ tr:hover {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 700px;
+    margin-left: 300px;
     position: relative;
 
-  
   }
+#stock-control h2{
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var( --text-color);
+}
+
   #stock-control .stock-form .input-box {
     width: 100%;
     margin-top: 20px;
@@ -614,8 +620,8 @@ tr:hover {
     box-shadow: 0 0 5px #df73ff;
 }
 #stock-control .input-field label{
-    font-weight: 400;
-    color: #F60380;
+    font-weight: 600;
+    color:  --text-color;
 }
 
 
@@ -633,7 +639,7 @@ tr:hover {
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    margin-left: 90px;
+    margin-left: 80px;
     margin-top: 10px;
   }
   
@@ -721,10 +727,8 @@ tr:hover {
     th,td{
         padding: 6px;
     }
-    td,th{
-        display: block;
-            text-align: right;
-    }
+   
+    
     td:not(:last-child) {
         margin-bottom: 1em;
     }
