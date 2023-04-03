@@ -97,20 +97,20 @@
             const tableBody = document.querySelector('#userTable tbody');
             data.forEach(user => {
               const row = document.createElement('tr');
-              const idCell = document.createElement('td');
+              const useridCell = document.createElement('td');
               const firstNameCell = document.createElement('td');
               const lastNameCell = document.createElement('td');
               const emailCell = document.createElement('td');
               const action = document.createElement('button')
         
-              idCell.textContent = user.id;
+              idCell.textContent = user.userid;
               firstNameCell.textContent = user.firstName;
               lastNameCell.textContent = user.lastName;
               emailCell.textContent = user.email;
               action.textContent = 'Delete User';
               action.setAttribute('id', 'btn-delete');
         
-              row.appendChild(idCell);
+              row.appendChild(useridCell);
               row.appendChild(firstNameCell);
               row.appendChild(lastNameCell);
               row.appendChild(emailCell);

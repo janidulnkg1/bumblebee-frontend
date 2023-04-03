@@ -100,11 +100,59 @@
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </section>
 
+    <section class="table">
+        <table id="adminTable" class="admin_table">
+            <tr id="header">
+                <th>Admin ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Manage Admin Account</th>
+            </tr>
+           
+           
+            
+    
+        </table>
+          
+    </section>
+
+
+    <script>
+        fetch('http://localhost:9191/admins')
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.querySelector('#adminTable tbody');
+            data.forEach(admin => {
+              const row = document.createElement('tr');
+              const adminIdCell = document.createElement('td');
+              const firstNameCell = document.createElement('td');
+              const lastNameCell = document.createElement('td');
+              const emailCell = document.createElement('td');
+              const action = document.createElement('button')
+        
+              adminIdCell.textContent = admin.adminId;
+              firstNameCell.textContent = admin.firstName;
+              lastNameCell.textContent = admin.lastName;
+              emailCell.textContent = admin.email;
+              action.textContent = 'Delete Admin Account';
+              action.setAttribute('id', 'btn-delete');
+        
+              row.appendChild(adminIdCell);
+              row.appendChild(firstNameCell);
+              row.appendChild(lastNameCell);
+              row.appendChild(emailCell);
+              row.appendChild(action);
+              tableBody.appendChild(row);
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+        </script>
     <script src="admin-script.js"></script>
 </body>
 </html>
