@@ -74,7 +74,7 @@
     </section>
 
     <section class="table">
-        <table>
+        <table id="order-table">
             <tr id="header">
                 <th>Order ID</th>
                 <th>Customer Name</th>
@@ -92,6 +92,61 @@
         </table>
           
     </section>
+
+    <script>
+    
+
+        fetch('http://localhost:9191/orders')
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.querySelector('#order-table tbody');
+            data.forEach(order => {
+              const row = document.createElement('tr');
+              const orderIDCell = document.createElement('td');
+              const customerNameCell = document.createElement('td');
+              const customerAddressCell = document.createElement('td');
+              const customerContactNoCell = document.createElement('td');
+              const orderDateCell = document.createElement('td');
+              const orderTotalCell = document.createElement('td');
+              const paymentStatusCell = document.createElement('td');
+              const action1 = document.createElement('button')
+              const action2 = document.createElement('button')
+              
+        
+              orderIDCell.textContent = order.orderID;
+              customerNameCell.textContent = order.customerName;
+              customerAddressCell.textContent = order.customerAddress;
+              customerContactNoCell.textContent = order.customerContactNo;
+              orderDateCell.textContent = new Date(order.orderDate).toLocaleDateString('en-GB');
+              orderTotalCell.textContent = order.orderTotal;
+              paymentStatusCell.textContent = order.paymentStatus;
+    
+             
+              action1.textContent = 'Update Order';
+              action1.setAttribute('id', 'btn-update');
+              action1.setAttribute('class', 'btn-update');
+              action2.textContent = 'Cancel Order';
+              action2.setAttribute('id', 'btn-remove');
+              action2.setAttribute('class', 'btn-remove');
+        
+              row.appendChild(orderIDCell);
+              row.appendChild(customerNameCell);
+              row.appendChild(customerAddressCell);
+              row.appendChild(customerContactNoCell);
+              row.appendChild(orderDateCell);
+              row.appendChild(orderTotalCell);
+              row.appendChild(paymentStatusCell);
+              row.appendChild(action1);
+              row.appendChild(action2);
+              
+              
+              tableBody.appendChild(row);
+            });
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+        </script>
 
     <script src="admin-script.js"></script>
 </body>
