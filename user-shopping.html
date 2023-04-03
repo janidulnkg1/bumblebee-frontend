@@ -80,7 +80,7 @@
        
         <p>0% Interest Installments</p>
 
-        <p>Check out for <span>Leasing Eligibility</span></p>
+        <p>Check out for <a href="#leasing">Leasing</a> <span>Eligibility</span></p>
 
         
     </section>
@@ -353,6 +353,67 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
         </div>
+    </section>
+
+    <section id="leasing">
+        <h2>Apply For an Installment Payment</h2>
+        <form id="lease-form" class="lease-form" onSubmit="handleAddItem(event)">
+            <div class="input-field">
+                <label for="item-type">Item Type:</label>
+                <select id="type-select" class="input" name="item-type" >
+                    <option value="none">Select Type..</option>
+                    <option value="Hats">Hats</option>
+                    <option value="Shirts">Shirts</option>
+                    <option value="T-Shirts">T-Shirts</option>
+                    <option value="Tops">Tops</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Formal Wear">Formal Wear</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Shorts">Shorts</option>
+                    <option value="Shoes">Shoes</option>
+                  </select>
+              </div> 
+              <div class="input-field">
+                <label for="item-brand">Item Brand:</label>
+                <select id="type-select" class="input" name="item-brand" >
+                    <option value="unbranded">Select Brand..</option>
+                    <option value="Nike">Nike</option>
+                    <option value="Adidas">Adidas</option>
+                    <option value="Jordans">Jordans</option>
+                    <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+                    <option value="Kelly Felder">Kelly Felder</option>
+                    <option value="Benetton">Benetton</option>
+                    <option value="Envoy">Envoy</option>
+                    <option value="Moose">Moose</option>
+                  </select>
+              </div>
+              <div class="input-field">
+                <label for="item-name">Item Name:</label>
+                <input type="text" class="input" id="item-name" placeholder="Enter Item name" name="item-name" required>
+              </div>
+              <div class="input-field">
+                <label for="item-size">Item Size:</label>
+                <select id="type-select" class="input" name="item-size" >
+                    <option value="none">Select Size..</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                    <option value="XXXL">XXXL</option>
+                  </select>
+              <div class="input-field">
+                <label for="price">Price:</label>
+                <input type="number" class="input" id="price" placeholder="Enter Price (LKR)" name="item-price" step="0.01" min="0" required>
+              </div>
+              <div class="input-field">
+                <label for="item-quantity">Item Quantity:</label>
+                <input type="text" class="input" id="item-quantity" placeholder="Enter Item Quantity" name="item-quantity" required>
+              </div>
+            <div class="form-row">
+            <button id="additem-button" type="submit" class="btn-additem">Add Item</button>
+          </form>
     </section>
 
     <script src="user-script.js"></script>

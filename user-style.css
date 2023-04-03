@@ -643,6 +643,116 @@ tr:hover {
     color: #9bddff;
     font-weight: 1000px;
   }
+  #leasing{
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 5% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 300px;
+    position: relative;
+    margin-top: 100px;
+
+  }
+#leasing h2{
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var( --text-color);
+}
+
+  #leasing .lease-form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #leasing .lease-form .input-box label {
+    color: #333;
+  }
+  #leasing .lease-form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  #leasing .stock-form .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  #leasing span{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+#leasing header{
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+#leasing .input-field .input{
+    height: 45px;
+    width: 87%;
+    border: 1px;
+    border-radius: 30px;
+    color: #AD5BDF;
+    font-size: 15px;
+    padding: 0 0 0 45px;
+    background: rgba(255,255,255,0.1);
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#leasing .input-field .input:hover{
+    border: 2px solid #F60380; 
+    box-shadow: 0 0 5px #df73ff;
+}
+#leasing .input-field label{
+    font-weight: 600;
+    color:  --text-color;
+}
+
+
+#leasing .btn-additem {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    margin-left: 80px;
+    margin-top: 10px;
+  }
+  
+  #leasing .btn-additem:hover {
+    background-color: #AD5BDF;
+    box-shadow: 0px 15px 20px rgba(174, 46, 229, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  #leasing .btn-additem:active {
+    transform: translateY(-1px);
+  }
 
 
 

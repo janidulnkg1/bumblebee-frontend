@@ -441,7 +441,7 @@ tr:hover {
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
 }
 
-.user_table,.admin_table button {
+.admin_table button {
   margin: 50px 50px;
   display: inline-block;
  padding: 0.9rem 1.8rem;
@@ -457,7 +457,7 @@ tr:hover {
  z-index: 1;
  font-family: inherit;
 }
-.user_table,.admin_table button::before {
+.admin_table button::before {
     content: "";
     position: absolute;
     left: 0;
@@ -470,9 +470,41 @@ tr:hover {
     z-index: -1;
    }
    
-   .user_table,.admin_table button:hover::before {
+   .admin_table button:hover::before {
     transform: translateX(0);
    }
+   .user_table button {
+    margin: 50px 50px;
+    display: inline-block;
+   padding: 0.9rem 1.8rem;
+   font-size: 16px;
+   font-weight: 700;
+   color: white;
+   border: 3px solid rgb(252, 70, 100);
+   cursor: pointer;
+   position: relative;
+   background-color: transparent;
+   text-decoration: none;
+   overflow: hidden;
+   z-index: 1;
+   font-family: inherit;
+  }
+  .user_table button::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(252, 70, 100);
+      transform: translateX(-100%);
+      transition: all .3s;
+      z-index: -1;
+     }
+     
+     .user_table button:hover::before {
+      transform: translateX(0);
+     }
 
    .table .btn-update{
     color: #df73ff;
