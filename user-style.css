@@ -706,7 +706,7 @@ tr:hover {
 #leasing .input-field .input{
     height: 45px;
     width: 87%;
-    border: 1px;
+    border: 1px #7b68ee;
     border-radius: 30px;
     color: #AD5BDF;
     font-size: 15px;
