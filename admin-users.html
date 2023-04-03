@@ -91,59 +91,62 @@
     </section>
 
     <script>
-         fetch('http://localhost:9191/users')
-        .then(response => response.json())
-        .then(data => {
-          const tableBody = document.querySelector('#userTable tbody');
-          data.forEach(user => {
-            const row = document.createElement('tr');
-            const idCell = document.createElement('td');
-            const firstNameCell = document.createElement('td');
-            const lastNameCell = document.createElement('td');
-            const emailCell = document.createElement('td');
-            const actionCell = document.createElement('td');
-            const actionButton = document.createElement('button');
-  
-            idCell.textContent = user.userid;
-            firstNameCell.textContent = user.firstName;
-            lastNameCell.textContent = user.lastName;
-            emailCell.textContent = user.email;
-            actionButton.textContent = 'Delete User';
-            actionButton.setAttribute('data-id', user.userid);
-  
-            actionButton.addEventListener('click', () => {
-              const userId = user.userid;
-              fetch(`http://localhost:9191/user/${userId}`, {
-                method: 'DELETE'
-              })
-              .then(response => {
-                if (response.ok) {
-                  row.remove();
-                  alert(`User ${userId} deleted successfully`);
-                } else {
-                  alert('Error deleting user');
+        fetch('http://localhost:9191/users')
+          .then(response => response.json())
+          .then(data => {
+            const tableBody = document.querySelector('#userTable tbody');
+            data.forEach(user => {
+              const row = document.createElement('tr');
+              const idCell = document.createElement('td');
+              const firstNameCell = document.createElement('td');
+              const lastNameCell = document.createElement('td');
+              const emailCell = document.createElement('td');
+              const actionCell = document.createElement('td');
+              const actionButton = document.createElement('button');
+    
+              idCell.textContent = user.userid;
+              firstNameCell.textContent = user.firstName;
+              lastNameCell.textContent = user.lastName;
+              emailCell.textContent = user.email;
+              actionButton.textContent = 'Delete User';
+              actionButton.setAttribute('data-id', user.userid);
+    
+              actionButton.addEventListener('click', () => {
+                const userId = user.userid;
+                const confirmDelete = confirm(`Are you sure you want to delete user ${userId}?`);
+                if (confirmDelete) {
+                  fetch(`http://localhost:9191/users/${userId}`, {
+                    method: 'DELETE'
+                  })
+                  .then(response => {
+                    if (response.ok) {
+                      row.remove();
+                      alert(`User ${userId} deleted successfully`);
+                    } else {
+                      alert('Error deleting user');
+                    }
+                  })
+                  .catch(error => {
+                    console.error('Error deleting user:', error);
+                  });
                 }
-              })
-              .catch(error => {
-                console.error('Error deleting user:', error);
               });
+    
+              actionCell.appendChild(actionButton);
+    
+              row.appendChild(idCell);
+              row.appendChild(firstNameCell);
+              row.appendChild(lastNameCell);
+              row.appendChild(emailCell);
+              row.appendChild(actionCell);
+    
+              tableBody.appendChild(row);
             });
-  
-            actionCell.appendChild(actionButton);
-  
-            row.appendChild(idCell);
-            row.appendChild(firstNameCell);
-            row.appendChild(lastNameCell);
-            row.appendChild(emailCell);
-            row.appendChild(actionCell);
-  
-            tableBody.appendChild(row);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
           });
-        })
-        .catch(error => {
-          console.error('Error fetching data:', error);
-        });
-        </script>
+      </script>
 
     <script src="admin-script.js"></script>
 </body>
