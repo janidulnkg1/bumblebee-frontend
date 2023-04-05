@@ -120,7 +120,44 @@
               action2.setAttribute('id', 'btn-remove');
               action2.setAttribute('class', 'btn-remove');
 
+              action2.addEventListener('click', () => {
+        const confirmed = confirm('Are you sure you want to delete this order?');
+        if (confirmed) {
+          fetch(`http://localhost:9191/lease/${lease.customerLeaseID}`, {
+            method: 'DELETE'
+          })
+            .then(response => response.json())
+            .then(data => {
               
+              row.remove();
+              alert('Lease has been cancelled successfully');
+            })
+            .catch(error => {
+              console.error('Error removing Lease:', error);
+            });
+        }
+      });
+
+      action1.addEventListener('click', () => {
+        const confirmed = confirm('Are you sure you want to update this LEASE plan Status to APPROVED?');
+        if (confirmed) {
+          const updatedOrder = { ...order, paymentStatus: 'APPROVED' };
+          fetch(`http://localhost:9191/orders/${lease.customerLeaseID}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(updatedOrder)
+          })
+            .then(response => response.json())
+            .then(data => {
+              // Update payment status cell
+              paymentStatusCell.textContent = data.paymentStatus;
+              alert('Order updated successfully');
+            })
+            .catch(error => {
+              console.error('Error updating order:', error);
+            });
+        }
+      });
         
               row.appendChild(customerLeaseIDCell);
               row.appendChild(customerNameCell);
