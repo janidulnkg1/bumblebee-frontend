@@ -192,58 +192,97 @@
 <script>
     
 
-    fetch('http://localhost:9191/stocks')
-      .then(response => response.json())
-      .then(data => {
-        const tableBody = document.querySelector('#stocktable tbody');
-        data.forEach(stock => {
-          const row = document.createElement('tr');
-          const productIDCell = document.createElement('td');
-          const itemTypeCell = document.createElement('td');
-          const itemBrandCell = document.createElement('td');
-          const itemNameCell = document.createElement('td');
-          const itemSizeCell = document.createElement('td');
-          const itemPriceCell = document.createElement('td');
-          const itemQuantityCell = document.createElement('td');
-          const action1 = document.createElement('button')
-          const action2 = document.createElement('button')
-          const action3 = document.createElement('button')
-    
-          productIDCell.textContent = stock.productID;
-          itemTypeCell.textContent = stock.itemType;
-          itemBrandCell.textContent = stock.itemBrand;
-          itemNameCell.textContent = stock.itemName;
-          itemSizeCell.textContent = stock.itemSize;
-          itemPriceCell.textContent = stock.itemPrice;
-          itemQuantityCell.textContent = stock.itemQuantity;
+    const tableBody = document.querySelector('#stocktable tbody');
+  tableBody.addEventListener('click', event => {
+    if (event.target.classList.contains('btn-update')) {
+      const row = event.target.parentNode;
+      const productID = row.cells[0].textContent;
+      const currentQuantity = parseInt(row.cells[6].textContent);
+      let updatedQuantity = currentQuantity;
+      
+      if (event.target.id === 'btn-add') {
+        updatedQuantity++;
+      } else {
+        updatedQuantity--;
+      }
 
-          action1.textContent = '+';
-          action1.setAttribute('id', 'btn-update');
-          action1.setAttribute('class', 'btn-update');
-          action2.textContent = '-';
-          action2.setAttribute('id', 'btn-update');
-          action2.setAttribute('class', 'btn-update');
-          action3.textContent = 'Remove';
-          action3.setAttribute('id', 'btn-remove');
-          action3.setAttribute('class', 'btn-remove');
-    
-          row.appendChild(productIDCell);
-          row.appendChild(itemTypeCell);
-          row.appendChild(itemBrandCell);
-          row.appendChild(itemNameCell);
-          row.appendChild(itemSizeCell);
-          row.appendChild(itemPriceCell);
-          row.appendChild(itemQuantityCell);
-          row.appendChild(action1);
-          row.appendChild(action2);
-          row.appendChild(action3);
-          
-          tableBody.appendChild(row);
-        });
+      if (updatedQuantity < 0) {
+        alert('Quantity cannot be negative');
+        return;
+      }
+      
+      const data = {
+        itemQuantity: updatedQuantity
+      };
+
+      fetch(`http://localhost:9191/stock/${productID}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
       })
-      .catch(error => {
-        console.error('Error fetching data:', error);
+        .then(response => response.json())
+        .then(stock => {
+          row.cells[6].textContent = stock.itemQuantity;
+        })
+        .catch(error => {
+          console.error('Error updating stock:', error);
+        });
+    }
+  });
+
+  fetch('http://localhost:9191/stocks')
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(stock => {
+        const row = document.createElement('tr');
+        const productIDCell = document.createElement('td');
+        const itemTypeCell = document.createElement('td');
+        const itemBrandCell = document.createElement('td');
+        const itemNameCell = document.createElement('td');
+        const itemSizeCell = document.createElement('td');
+        const itemPriceCell = document.createElement('td');
+        const itemQuantityCell = document.createElement('td');
+        const action1 = document.createElement('button')
+        const action2 = document.createElement('button')
+        const action3 = document.createElement('button')
+  
+        productIDCell.textContent = stock.productID;
+        itemTypeCell.textContent = stock.itemType;
+        itemBrandCell.textContent = stock.itemBrand;
+        itemNameCell.textContent = stock.itemName;
+        itemSizeCell.textContent = stock.itemSize;
+        itemPriceCell.textContent = stock.itemPrice;
+        itemQuantityCell.textContent = stock.itemQuantity;
+
+        action1.textContent = '+';
+        action1.setAttribute('id', 'btn-add');
+        action1.setAttribute('class', 'btn-update');
+        action2.textContent = '-';
+        action2.setAttribute('id', 'btn-subtract');
+        action2.setAttribute('class', 'btn-update');
+        action3.textContent = 'Remove';
+        action3.setAttribute('id', 'btn-remove');
+        action3.setAttribute('class', 'btn-remove');
+  
+        row.appendChild(productIDCell);
+        row.appendChild(itemTypeCell);
+        row.appendChild(itemBrandCell);
+        row.appendChild(itemNameCell);
+        row.appendChild(itemSizeCell);
+        row.appendChild(itemPriceCell);
+        row.appendChild(itemQuantityCell);
+        row.appendChild(action1);
+        row.appendChild(action2);
+        row.appendChild(action3);
+        
+        tableBody.appendChild(row);
       });
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
     </script>
     <script src="admin-script.js"></script>
 </body>
