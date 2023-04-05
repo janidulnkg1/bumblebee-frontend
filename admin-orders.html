@@ -132,12 +132,12 @@
               action2.addEventListener('click', () => {
         const confirmed = confirm('Are you sure you want to delete this order?');
         if (confirmed) {
-          fetch(`http://localhost:9191/orders/${orderID}`, {
+          fetch(`http://localhost:9191/orders/${order.orderID}`, {
             method: 'DELETE'
           })
             .then(response => response.json())
             .then(data => {
-              // Remove row from table
+             
               row.remove();
               alert('Order deleted successfully');
             })
@@ -150,7 +150,7 @@
       action1.addEventListener('click', () => {
         const confirmed = confirm('Are you sure you want to update this order to paid?');
         if (confirmed) {
-          const updatedOrder = { ...order, paymentStatus: 'paid' };
+          const updatedOrder = { ...order, paymentStatus: 'PAID' };
           fetch(`http://localhost:9191/order/${order.orderID}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
