@@ -265,6 +265,24 @@
         action3.textContent = 'Remove';
         action3.setAttribute('id', 'btn-remove');
         action3.setAttribute('class', 'btn-remove');
+
+        action3.addEventListener('click', () => {
+        const confirmed = confirm('Are you sure you want to delete this Stock Item?');
+        if (confirmed) {
+          fetch(`http://localhost:9191/stock/${stock.productID}`, {
+            method: 'DELETE'
+          })
+            .then(response => response.json())
+            .then(data => {
+              
+              row.remove();
+              alert('Item deleted successfully');
+            })
+            .catch(error => {
+              console.error('Error deleting Item:', error);
+            });
+        }
+      });
   
         row.appendChild(productIDCell);
         row.appendChild(itemTypeCell);
