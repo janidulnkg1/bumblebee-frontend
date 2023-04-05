@@ -59,8 +59,8 @@
             <p>Receive latest updates about our latest <span>Promotions</span></p>
         </div>
         <div class="form">
-            <input type="email" placeholder="Your email address">
-            <button >Subscribe</button>
+            <input type="email" placeholder="Your email address" id="email-input"  required>
+            <button id="send-email-btn">Subscribe</button>
         </div>
     </section>
 
@@ -104,6 +104,49 @@
             <p>© Bumblebee 2023, Developed By: © NXTInnov8ions  </p>
         </div>
     </footer>
+
+    <script>
+        const sendEmailBtn = document.querySelector('#send-email-btn');
+const emailInput = document.querySelector('#email-input');
+
+sendEmailBtn.addEventListener('click', () => {
+  const recipient = emailInput.value;
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': '8ab7077ff0mshed0b8b2de986b33p15912bjsnf02939c83789',
+      'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
+    },
+    body: JSON.stringify({
+      personalizations: [{
+        to: [{
+          email: recipient
+        }],
+        subject: 'Bumblebee Subscription'
+      }],
+      from: {
+        email: 'bumblebee2k23retail@gmail.com'
+      },
+      content: [{
+        type: 'text/plain',
+        value: 'Thank you for subscribing to Bumblebee!'
+      }]
+    })
+  };
+
+  fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', options)
+    .then(response => {
+      if (response.ok) {
+        alert('SUBSCRIBED');
+      } else {
+        throw new Error('Email could not be sent');
+      }
+    })
+    .catch(err => console.error(err));
+});
+
+      </script>
 
     <script src="script.js"></script>
 </body>
