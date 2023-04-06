@@ -15,7 +15,7 @@ function handleUserLogin(event) {
   .then(response => {
     if (response.status === 200) {
       window.location.href = 'user-dashboard.html';
-      alert("User Login Successful!");
+      alert("User Login Successful!!");
     } else {
       alert("Invalid Login! Please Try again.");
     }
